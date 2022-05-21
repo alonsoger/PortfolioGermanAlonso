@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
     box-sizing: border-box;
     color: #faebd7;
 }
@@ -11,8 +11,17 @@
     align-items: center;
     text-align: center;
 
-    padding: 5px 50px;
-    max-width: 1500px;
+    margin: 5px auto;
+    border: 2px solid #faebd7;
+    max-width: 90%;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ) , url(../../../assets/Fotos/office.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
 }
 
 h3 {
