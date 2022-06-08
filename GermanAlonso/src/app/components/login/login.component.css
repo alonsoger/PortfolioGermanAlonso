@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid white;
+}
+
+.formLabel {
+    margin: 5px 5px;
+    padding: 5px 0px 0px 0px;
+    color: antiquewhite;
+}
+
+.btn {
+    margin: 5px 0px 0px 0px;
+}

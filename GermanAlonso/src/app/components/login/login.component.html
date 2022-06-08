@@ -1,0 +1,26 @@
+<div class="container">
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <div>
+        <label class="formLabel" for="usuario">Usuario: </label>
+        <input type="text" formControlName="usuario">
+        <p>Mensaje de error</p>
+    </div>
+    
+    <div>
+        <label class="formLabel" for="password">Password: </label>
+        <input type="password" formControlName="password">
+        <p>mensaje de error</p>
+    </div>
+    
+    <div>
+        <label class="formLabel" for="mail">Email: </label>
+        <input type="email" formControlName="mail">
+        <p>mensaje de error</p>
+    </div>
+    <br/>
+    <div class="btn">
+        <button class="formBtn" type="submit">Iniciar Sesion</button>
+    </div>
+
+</form>
+</div>

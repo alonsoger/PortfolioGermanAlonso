@@ -13,4 +13,8 @@ export class HMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick(event: any): void {
+    alert("Click");
+  }
+
 }
