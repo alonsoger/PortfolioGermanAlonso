@@ -17,14 +17,14 @@
     margin: 5px auto;
     max-width: 90%;
 
-    border: 2px solid #faebd7;
+/*    border: 2px solid #faebd7;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
     ) ,url("../../../assets/Fotos/Libros.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 h3 {
