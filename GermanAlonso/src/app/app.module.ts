@@ -19,6 +19,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProyectosComponent,
     FooterComponent,
     LoginComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

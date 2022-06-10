@@ -16,7 +16,7 @@ export class AuthService {
     this.http.post(this.api + '/authenticate', {usuario: usuario, password: password, email: email})
     .subscribe((resp: any) => {
       //redireccionamos al perfil del Usuario
-      this.router.navigate(['profile']);
+      this.router.navigate(['/home']);
       //guardamos el token en localStorage
       localStorage.setItem('auth_token', resp.token); 
     })

@@ -21,20 +21,21 @@ export class LoginComponent implements OnInit {
       email:['',[Validators.required, Validators.email]],
     })
    }
+//------------------- USUARIO ------------------------------   
    get Usuario(){
      return this.form.get("usuario");
    }
    get UsuarioValid(){
      return this.Usuario?.touched && !this.Usuario?.valid;
    }
-
+//------------------- PASSWORD ------------------------------ 
    get Password(){
      return this.form.get("password");
    }
    get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }
-   
+//------------------- EMAIL ---------------------------------    
    get Email(){
      return this.form.get("email");
    }
@@ -55,7 +56,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  //Este es la valicacion con el AuthService para ver si esta conectado o no. 
+  //Este es la validacion con el AuthService para ver si esta conectado o no. 
   Login() {
     this.authService.login(this.usuario, this.email, this.password)
   }

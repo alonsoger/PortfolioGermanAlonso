@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-h-menu',
@@ -8,13 +9,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HMenuComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onClick(event: any): void {
-    alert("Click");
+    this.router.navigate(['/login']);
   }
 
 }
