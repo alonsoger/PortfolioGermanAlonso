@@ -18,10 +18,29 @@ export class LoginComponent implements OnInit {
     this.form= this.formBuilder.group({
       usuario:['',[Validators.required, Validators.minLength(5), Validators.maxLength(12)]],
       password:['',[Validators.required, Validators.minLength(8)]],
-      mail:['',[Validators.required, Validators.email]],
+      email:['',[Validators.required, Validators.email]],
     })
    }
-   // Hacer los gets de Usuario, password, mail. 
+   get Usuario(){
+     return this.form.get("usuario");
+   }
+   get UsuarioValid(){
+     return this.Usuario?.touched && !this.Usuario?.valid;
+   }
+
+   get Password(){
+     return this.form.get("password");
+   }
+   get PasswordValid(){
+    return this.Password?.touched && !this.Password?.valid;
+  }
+   
+   get Email(){
+     return this.form.get("email");
+   }
+   get EmailValid(){
+     return false;
+   }
 
   onEnviar(event: Event){
     event.preventDefault;
@@ -40,8 +59,6 @@ export class LoginComponent implements OnInit {
   Login() {
     this.authService.login(this.usuario, this.email, this.password)
   }
-
-
 
   ngOnInit(): void {
   }
