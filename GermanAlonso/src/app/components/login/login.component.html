@@ -1,49 +1,56 @@
 <div class="container">
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div class="login-form">
+            <label class="tab">Sign Up</label>
 <!----------------------------------- USUARIO ------------------------------->    
-    <div>
-        <label class="formLabel" for="usuario">Usuario: </label>
-        <input type="text" formControlName="usuario">
-    </div>
-    <div *ngIf="Usuario?.errors && Usuario?.touched">    
-        <p *ngIf="Usuario?.hasError('required')" class="error">
+        <div class="form-group">
+            <label class="form-label" for="usuario">Usuario: </label>
+            <input class="form-input" type="text" formControlName="usuario">
+        </div>
+        <!------- USUARIO ERRORES ----->
+        <div *ngIf="Usuario?.errors && Usuario?.touched">    
+            <p *ngIf="Usuario?.hasError('required')" class="error">
             El Usuario es requerido
-        </p>
-        <p *ngIf="Usuario?.errors?.['minlength']" class="error">
+            </p>
+            <p *ngIf="Usuario?.errors?.['minlength']" class="error">
             El usuario debe tener entre 5 y 12 caracteres
-          </p>
-    </div>
-<!----------------------------------- PASSWORD ------------------------------->
-    <div>
-        <label class="formLabel" for="password">Password: </label>
-        <input type="password" formControlName="password">
-    </div>
-    <div *ngIf="Password?.errors && Password?.touched">    
-        <p *ngIf="Password?.hasError('required')" class="error">
-            El Password es requerido
-        </p>
-        <p *ngIf="Password?.errors?.['minlength']" class="error">
-            Debe tener 8 caracteres como minimo
-          </p>
-    </div>
-<!----------------------------------- EMAIL ------------------------------->    
-    <div>
-        <label class="formLabel" for="mail">Email: </label>
-        <input type="email" formControlName="email">
-    </div>
-    <div *ngIf="Email?.errors && Email?.touched">    
-        <p *ngIf="Email?.hasError('required')" class="error">
-            El email es requerido.
-        </p>
-        <p *ngIf="Email?.hasError('email')" class="error">
-            El formato del email debe ser válido.
-          </p>
-    </div>
-    <br/>
-<!----------------------------------- BOTON ------------------------------->
-    <div class="btn">
-        <button class="formBtn" type="submit">Iniciar Sesion</button>
-    </div>
+            </p>
+        </div>
 
-</form>
+<!----------------------------------- PASSWORD ------------------------------->
+        <div class="form-group">
+            <label class="form-label" for="password">Password: </label>
+            <input class="form-input" type="password" formControlName="password">
+        </div>
+
+        <div *ngIf="Password?.errors && Password?.touched">    
+            <p *ngIf="Password?.hasError('required')" class="error">
+            El Password es requerido
+            </p>
+            <p *ngIf="Password?.errors?.['minlength']" class="error">
+            Debe tener 8 caracteres como minimo
+            </p>
+        </div>
+<!----------------------------------- EMAIL ------------------------------->    
+        <div class="form-group">
+            <label class="form-label" for="mail">Email: </label>
+            <input class="form-input" type="email" formControlName="email">
+        </div>
+
+        <div *ngIf="Email?.errors && Email?.touched">    
+            <p *ngIf="Email?.hasError('required')" class="error">
+            El email es requerido.
+            </p>
+            <p *ngIf="Email?.hasError('email')" class="error">
+            El formato del email debe ser válido.
+            </p>
+        </div>
+        <br/>
+<!----------------------------------- BOTON ------------------------------->
+        <div class="btn">
+            <button class="formBtn" type="submit">Iniciar Sesion</button>
+        </div>
+        <div class="hr"></div>
+    </div>
+    </form>
 </div>
