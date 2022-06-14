@@ -42,13 +42,13 @@ export class LoginComponent implements OnInit {
    get EmailValid(){
      return false;
    }
-
+//------------------- FUNCIONES --------------------------------- 
   onEnviar(event: Event){
     event.preventDefault;
     if (this.form.valid){
       console.log('Esta todo ok')
       //Llamamos al servicio para enviar los datos al servidor. Y/o agregamos alguna logica extra!
-      //Podria ser alguna mensaje o algo divertido!! 
+      //Podria ser algun mensaje o algo divertido!! 
     } else {
       //Corremos las validaciones para que se ejecuten los mensajes de error. 
       this.form.markAllAsTouched();

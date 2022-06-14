@@ -16,23 +16,6 @@
     background-position: center center;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
-.errores {
-    height: 80px;
-}
-.error {
-    height: 64px;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 3px;
-    color: white;
-}
-
-.tab {
-    text-align: center;
-    font-size: 40px;
-    padding: 15px;
-    color: rgb(255, 255, 255);
-}
 
 .login-form {
     display: flex;
@@ -46,6 +29,34 @@
 
 }
 
+.tab {
+    text-align: center;
+    font-size: 40px;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.group {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.errores {
+    height: 50px;
+}
+.error {
+    height: 30px;
+    margin-bottom: 3px;
+
+    font-size: 29px;
+    color: white;
+}
+
+
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -53,7 +64,7 @@
     align-items: flex-start;
 
     width: 200px;
-	height: 80px;
+	height: 50px;
 
     padding: 5px 5px;
     margin-bottom: 60px;
@@ -64,17 +75,36 @@
 .form-label {
     display:flex;
     justify-content: center;
-    font-size: 30px;
-    color:rgb(255, 255, 255);
+
+    font-size: 31px;
+    color:rgb(245, 245, 245, 0.9);
     width: 150px;
-    height: 10px;
+    height: 40px;
 
 }
 
 .form-input {
+    border: none;
+    font-size: 40px;
     margin-top: 3px;
+
     width: 300px;
-    border-radius: 2px;
+    height: 100px;
+    border-radius: 8px;
+    background-color: rgb(245,245,245);
+}
+.formBtn {
+    font-size:32px;
+    border-radius: 10px;
+    border: none;
+    width: 210px;
+    height: 60px;
+}
+
+.formBtn:hover {
+    color: rgb(245, 245, 245);
+    background-color: rgba(111, 76, 167, 0.868);
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 
 .hr{

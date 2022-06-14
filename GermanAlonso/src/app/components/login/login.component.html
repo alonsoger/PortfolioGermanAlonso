@@ -1,13 +1,13 @@
 <div class="container">
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-        <div class="login-form">
+        <div class="row login-form">
             <label class="tab">Inicio de Sesion</label>
 <!----------------------------------- USUARIO ------------------------------->    
         <div class="form-group">
             <label class="form-label" for="usuario">Usuario: </label>
             <input class="form-input" type="text" formControlName="usuario">
         </div>
-        <!------- USUARIO ERRORES ----->
+
         <div class="errores" *ngIf="Usuario?.errors && Usuario?.touched">    
             <p *ngIf="Usuario?.hasError('required')" class="error">
             El Usuario es requerido
@@ -16,7 +16,6 @@
             El usuario debe tener entre 5 y 12 caracteres
             </p>
         </div>
-
 <!----------------------------------- PASSWORD ------------------------------->
         <div class="form-group">
             <label class="form-label" for="password">Password: </label>
@@ -48,7 +47,7 @@
         <br/>
 <!----------------------------------- BOTON ------------------------------->
         <div class="btn">
-            <button class="formBtn" type="submit">Iniciar Sesion</button>
+            <button class="formBtn" type="submit" (onclick)="Login()">Iniciar Sesion</button>
         </div>
         <div class="hr"></div>
     </div>

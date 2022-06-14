@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 //Agregamos la url de la ApiRest y el token de firma. 
-  api = "";
-  token = "";
+  api = ""; //URL APIREST 
+  token = ""; //TOKEN DE FIRMA  
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -16,7 +16,7 @@ export class AuthService {
     this.http.post(this.api + '/authenticate', {usuario: usuario, password: password, email: email})
     .subscribe((resp: any) => {
       //redireccionamos al perfil del Usuario
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home']); //PERFIL URL 
       //guardamos el token en localStorage
       localStorage.setItem('auth_token', resp.token); 
     })
