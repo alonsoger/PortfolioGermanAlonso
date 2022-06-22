@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms'
 import { AuthService } from '../../service/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   email = '';
   password = '';
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
     this.form= this.formBuilder.group({
       usuario:['',[Validators.required, Validators.minLength(5), Validators.maxLength(12)]],
       password:['',[Validators.required, Validators.minLength(8)]],
@@ -46,19 +47,22 @@ export class LoginComponent implements OnInit {
   onEnviar(event: Event){
     event.preventDefault;
     if (this.form.valid){
-      console.log('Esta todo ok')
+      console.log('Esta todo ok');
+      this.router.navigate(['']);
       //Llamamos al servicio para enviar los datos al servidor. Y/o agregamos alguna logica extra!
       //Podria ser algun mensaje o algo divertido!! 
+
     } else {
       //Corremos las validaciones para que se ejecuten los mensajes de error. 
       this.form.markAllAsTouched();
-      console.log('Algun error')
+      console.log('Algun error');
+      alert('Complete los datos')
     }
   }
 
   //Este es la validacion con el AuthService para ver si esta conectado o no. 
-  Login() {
-    this.authService.login(this.usuario, this.email, this.password)
+  Login () {
+    this.authService.login(this.usuario, this.email, this.password);
   }
 
   ngOnInit(): void {
