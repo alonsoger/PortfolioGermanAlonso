@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
     event.preventDefault;
     if (this.form.valid){
       console.log('Esta todo ok');
-      this.router.navigate(['']);
+      this.router.navigate(['']); //Navegacion hacia el inicio
       //Llamamos al servicio para enviar los datos al servidor. Y/o agregamos alguna logica extra!
       //Podria ser algun mensaje o algo divertido!! 
 
