@@ -6,7 +6,7 @@
 
 .container {
     display: flex;
-    
+    justify-content: center;
     height: 800px;
     width: 2000px;
     background-image: url(../../../assets/Fotos/Banner/Escritorio.jpg);
