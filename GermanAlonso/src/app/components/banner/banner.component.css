@@ -6,19 +6,21 @@
 
 .container {
     display: flex;
-    
     height: 800px;
-    width: 2000px;
+    width: 3000px;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    height: 800px;
+    width: 3000px;
+    
     background-image: url(../../../assets/Fotos/Banner/Escritorio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
-
-.row {
-    width: 2000px;
-}
-
 
 .titulo {
     align-self: center;
@@ -38,19 +40,21 @@ div {
     width: max-content;
     height: 326px;
 }
+
 .esfera1 {
     display: flex;
     justify-content: flex-start;
     height: 10px;
     width: 10px;
 }
+
 .esfera1 > img {
     height: 100px;
     position: absolute;
 }
+
 .oneP > img {
     transform: rotate(-12deg);
-
     width: 600px;
     height: 300px;
 }
@@ -63,17 +67,21 @@ div {
     border-radius: 100%;
     background-color: rgba(231, 221, 80, 0.5);
 }
+.jujutsu {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.jujutsu > img {
+    height: 210px;
+}
 .titulo {
     display: flex;
     flex-direction: row;
-    height: 150px; 
-}
-.jujutsu  > img {
     height: 150px;
-    width: 550px;
+
 }
-
-
 .rickmorty {
     display: flex;
     flex-direction: row;
@@ -137,7 +145,7 @@ div {
 }
 .rick {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .rick > img {
