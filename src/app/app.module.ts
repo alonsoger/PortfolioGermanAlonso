@@ -21,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { interceptorProvider } from './service/interceptor-service';
+import { NewExpComponent } from './components/experiencia/new-exp.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { interceptorProvider } from './service/interceptor-service';
     FooterComponent,
     LoginComponent,
     HomeComponent,
+    NewExpComponent,
   ],
   imports: [
     BrowserModule,
