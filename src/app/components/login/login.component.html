@@ -1,25 +1,26 @@
 <div class="container">
-    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
         <div class="row login-form">
             <label class="tab">Inicio de Sesion</label>
 <!----------------------------------- USUARIO ------------------------------->    
         <div class="form-group">
-            <label class="form-label" for="usuario">Usuario: </label>
-            <input class="form-input" type="text" formControlName="usuario">
+            <label class="form-label" for="nombreUsuario">Usuario: </label>
+            <input class="form-input" type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
         </div>
 
-        <div class="errores" *ngIf="Usuario?.errors && Usuario?.touched">    
-            <p *ngIf="Usuario?.hasError('required')" class="error">
+        <div class="errores" *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">    
+            <p *ngIf="NombreUsuario?.hasError('required')" class="error">
             El Usuario es requerido
             </p>
-            <p *ngIf="Usuario?.errors?.['minlength']" class="error">
+            <p *ngIf="NombreUsuario?.errors?.['minlength']" class="error">
             El usuario debe tener entre 5 y 12 caracteres
             </p>
         </div>
+
 <!----------------------------------- PASSWORD ------------------------------->
         <div class="form-group">
             <label class="form-label" for="password">Password: </label>
-            <input class="form-input" type="password" formControlName="password">
+            <input class="form-input" type="password" id="password" name="password" [(ngModel)]="password" required>
         </div>
 
         <div class="errores" *ngIf="Password?.errors && Password?.touched">    
@@ -29,10 +30,10 @@
             <p *ngIf="Password?.errors?.['minlength']" class="error">
             Debe tener 8 caracteres como minimo
             </p>
-        </div>
+        </div>       
 <!----------------------------------- EMAIL ------------------------------->    
-        <div class="form-group">
-            <label class="form-label" for="mail">Email: </label>
+<!--        <div class="form-group">
+            <label class="form-label" for="email">Email: </label>
             <input class="form-input" type="email" formControlName="email">
         </div>
 
@@ -45,9 +46,10 @@
             </p>
         </div>
         <br/>
+-->        
 <!----------------------------------- BOTON ------------------------------->
         <div class="btn">
-            <button class="formBtn" type="submit" (onclick)="Login()">Iniciar Sesion</button>
+            <button class="formBtn" type="submit" (click)="onEnviar($event)">Iniciar Sesion</button>
         </div>
         <div class="hr"></div>
     </div>

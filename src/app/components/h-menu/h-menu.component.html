@@ -1,3 +1,4 @@
 <div>
-  <button class="btnMenu fa-solid fa-circle-user" (click)="onClick($event)"></button>
+  <button class="btnMenu fa-solid fa-circle-user" (click)="onClick()" *ngIf="!isLogged"></button>
+  <button class="btnMenu fa-solid fa-otter" (click)="onLogOut()" *ngIf="isLogged"></button>
 </div>

@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms'
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
+import { LoginUsuario } from 'src/app/modelo/login-usuario';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-login',
@@ -10,24 +12,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  isLogged = false;
+  isLogginFail = false;
+  loginUsuario!: LoginUsuario;
+  nombreUsuario!: string;
+  password!: string;
+  roles: string[] = []; 
+  errMsj!: string;
   form: FormGroup;
-  usuario = '';
+  usuario = this.nombreUsuario;
   email = '';
-  password = '';
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
-    this.form= this.formBuilder.group({
+
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router, private tokenService: TokenService) {
+      this.form= this.formBuilder.group({
       usuario:['',[Validators.required, Validators.minLength(5), Validators.maxLength(12)]],
-      password:['',[Validators.required, Validators.minLength(8)]],
-      email:['',[Validators.required, Validators.email]],
+      password:['',[Validators.required, Validators.minLength(8)]]
+      //,email:['',[Validators.required, Validators.email]],
     })
    }
+
 //------------------- USUARIO ------------------------------   
-   get Usuario(){
-     return this.form.get("usuario");
+   get NombreUsuario(){
+     return this.form.get("nombreUsuario");
    }
    get UsuarioValid(){
-     return this.Usuario?.touched && !this.Usuario?.valid;
+     return this.NombreUsuario?.touched && !this.NombreUsuario?.valid;
    }
 //------------------- PASSWORD ------------------------------ 
    get Password(){
@@ -36,13 +46,13 @@ export class LoginComponent implements OnInit {
    get PasswordValid(){
     return this.Password?.touched && !this.Password?.valid;
   }
-//------------------- EMAIL ---------------------------------    
+/*------------------- EMAIL ---------------------------------    
    get Email(){
      return this.form.get("email");
    }
    get EmailValid(){
      return false;
-   }
+   }*/
 //------------------- FUNCIONES --------------------------------- 
   onEnviar(event: Event){
     event.preventDefault;
@@ -56,16 +66,33 @@ export class LoginComponent implements OnInit {
       //Corremos las validaciones para que se ejecuten los mensajes de error. 
       this.form.markAllAsTouched();
       console.log('Algun error');
-      alert('Complete los datos')
     }
   }
 
-  //Este es la validacion con el AuthService para ver si esta conectado o no. 
-  Login () {
-    this.authService.login(this.usuario, this.email, this.password);
+  ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+      this.isLogginFail = false;
+      this.roles = this.tokenService.getAuthorities();
+    }
   }
 
-  ngOnInit(): void {
+  onLogin(): void {
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
+    this.authService.login(this.loginUsuario).subscribe(data => {
+      this.isLogged = true;
+      this.isLogginFail = false;
+      this.tokenService.setToken(data.token);
+      this.tokenService.setUserName(data.nombreUsuario);
+      this.tokenService.setAuthorities(data.authorities);
+      this.roles = data.authorities;
+      this.router.navigate([''])
+    }, err => {
+      this.isLogged = false;
+      this.isLogginFail = true;
+      this.errMsj = err.error.mensaje;
+      console.log(this.errMsj);
+    })
   }
 
 }
