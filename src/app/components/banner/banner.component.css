@@ -8,6 +8,11 @@
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+.row {
+
+    width: 2024px;
 
     background-image: url(../../../assets/Fotos/Banner/Escritorio.jpg);
     background-repeat: no-repeat;
