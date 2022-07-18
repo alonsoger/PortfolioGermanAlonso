@@ -7,24 +7,24 @@ import { ExpLaboral } from '../modelo/exp-laboral';
   providedIn: 'root'
 })
 export class ExpLaboralService {
-  expURL = 'http://localhost8080/explaboral/'
+  expURL = 'http://localhost:8080/explaboral/'
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<ExpLaboral[]> {
-    return this.httpClient.get<ExpLaboral[]>(this.expURL + 'lista');
+    return this.httpClient.get<ExpLaboral[]>(this.expURL + 'list');
   }
 
   public detail(id: number): Observable<ExpLaboral>{
     return this.httpClient.get<ExpLaboral>(this.expURL + `detail/${id}`);
   }
 
-  public save(exp: ExpLaboral): Observable<any> {
-    return this.httpClient.post<any>(this.expURL + 'create', exp);
+  public save(experiencia: ExpLaboral): Observable<any> {
+    return this.httpClient.post<any>(this.expURL + `create`, experiencia);
   }
 
-  public update(id: number, exp: ExpLaboral): Observable<any> {
-    return this.httpClient.put<any>(this.expURL + `update/${id}`, exp);
+  public update(id: number, experiencia: ExpLaboral): Observable<any> {
+    return this.httpClient.put<any>(this.expURL + `update/${id}`, experiencia);
   }
 
   public delete(id: number): Observable<any> {

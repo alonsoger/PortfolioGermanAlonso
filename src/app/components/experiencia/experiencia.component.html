@@ -5,7 +5,9 @@
             <h3>Experiencia</h3>
         </div>
         <div>
-            <button type="button" class="btn btn-primary b" routerLink="/newexp" *ngIf="isLogged">Nueva Experiencia</button>
+            <button type="button" class="btn btn-primary b" routerLink="/newexp" *ngIf="isLogged">
+                Nueva Experiencia
+            </button>
         </div>
 
         <table class="table">
@@ -13,8 +15,15 @@
                 <tr *ngFor="let ExpLaboral of experiencia">
                     <td>{{ExpLaboral.nombreExp}}</td>
                     <td>{{ExpLaboral.descripExp}}</td>
-                    <td>Editar</td>
-                    <td>Borrar</td>
+                    <td *ngIf="isLogged">
+                        <button class="" routerLink="/editexp/{{ExpLaboral.id}}">
+                            Editar
+                        </button>
+                    </td>
+                    
+                    <td *ngIf="isLogged">
+                        Borrar
+                    </td>
                 </tr>
             </tbody>
         </table>

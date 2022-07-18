@@ -26,7 +26,7 @@ export class ExperienciaComponent implements OnInit {
   }
 
   cargaExp(): void {
-    this.expService.lista().subscribe(data => {this.experiencia = data});
+    this.expService.lista().subscribe(data => {this.experiencia = data;})
   
   }
 

@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { NewExpComponent } from './components/experiencia/new-exp.component';
+import { EditExpComponent } from './components/experiencia/edit-exp.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { NewExpComponent } from './components/experiencia/new-exp.component';
     LoginComponent,
     HomeComponent,
     NewExpComponent,
+    EditExpComponent,
   ],
   imports: [
     BrowserModule,
