@@ -30,4 +30,15 @@ export class ExperienciaComponent implements OnInit {
   
   }
 
+  delete(id?: number) {
+    if(id != undefined) {
+      this.expService.delete(id).subscribe(data => {
+        this.cargaExp();
+      }, err => {
+        alert("No se pudo eliminar");
+        }
+      )
+    }
+  }
+
 }
