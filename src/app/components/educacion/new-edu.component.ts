@@ -11,12 +11,13 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class NewEduComponent implements OnInit {
 
   nombreEdu: string = '';
-  fechaEdu: number = 0;
+  fechaEdu: number;
   descripEdu: string = '';
 
   constructor(private eduService: EducacionService, private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
   onCreate(): void {
