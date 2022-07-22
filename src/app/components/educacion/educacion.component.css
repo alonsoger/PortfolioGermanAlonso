@@ -2,18 +2,28 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  color: #faebd7;
+  background-color:  rgb(28, 40, 51);
+  color:   rgb(251, 252, 252);
 }
 
 .container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
 
   padding: 5px 0px;
   margin: 5px auto;
-  max-width: 90%;
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
 }
 
 .title {
@@ -30,6 +40,14 @@
     border: none;
 }
 
+.btn2 {
+  align-self: center;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  border: none;
+}
+
 
 
 h3 {
@@ -38,4 +56,9 @@ h3 {
 }
 h4 {
   font-size: 55px;
+}
+
+.imagenes > img {
+  width: 300px;
+
 }

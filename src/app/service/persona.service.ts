@@ -10,10 +10,10 @@ export class PersonaService {
   
   Url = 'http://localhost:8080/personas/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   public getPersona(): Observable<persona> {
-    return this.http.get<persona>( this.Url + `traer`);
+    return this.httpClient.get<persona>(this.Url + 'traer/perfil');
   }
 
 

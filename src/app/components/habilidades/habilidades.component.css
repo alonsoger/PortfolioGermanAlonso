@@ -14,10 +14,6 @@
 
     padding: 0px 20px;
     max-width: 100%;
-    background-color: #144F5E;
+    background-color: rgb(251, 252, 252);
 
-}
-
-.circle-progress::-webkit-scrollbar {
-    animation: circle-progress 0.5s linear infinite;
 }

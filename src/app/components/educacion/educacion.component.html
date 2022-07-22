@@ -1,48 +1,58 @@
 <div class="container">
   <div class="row">
-    <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <h3>Educacion</h3>
-      <button
-        type="button"
-        class="btn fa-regular fa-square-plus"
-        routerLink="/newedu"
-        *ngIf="isLogged"
-      ></button>
+    <div class="col">
+      <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button type="button" class="btn2 fa-solid fa-hat-wizard"></button>
+        <h3>Educación</h3>
+        <button
+          type="button"
+          class="btn fa-regular fa-square-plus"
+          routerLink="/newedu"
+          *ngIf="isLogged"
+        ></button>
+      </div>
+
+      <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="table align-middle table-borderless table-hover">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Fecha</th>
+              <!--<th>Fecha Fin</th>-->
+              <th>Descripcion</th>
+              <th td *ngIf="isLogged">Actualizar</th>
+              <th td *ngIf="isLogged">Borrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Educacion of educacion">
+              <td>{{ Educacion.nombreEdu }}</td>
+              <td>{{ Educacion.fechaEdu }}</td>
+              <td>{{ Educacion.descripEdu }}</td>
+
+              <td *ngIf="isLogged">
+                <button
+                  class="btn fa-regular fa-pen-to-square"
+                  routerLink="/editedu/{{ Educacion.id }}"
+                ></button>
+              </td>
+              <td *ngIf="isLogged">
+                <button
+                  class="btn fa-regular fa-trash-can"
+                  (click)="delete(Educacion.id)"
+                ></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <table class="table align-middle table-borderless table-hover">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Fecha</th>
-            <!--<th>Fecha Fin</th>-->
-            <th>Descripcion</th>
-            <th td *ngIf="isLogged">Actualizar</th>
-            <th td *ngIf="isLogged">Borrar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let Educacion of educacion">
-            <td>{{ Educacion.nombreEdu }}</td>
-            <td>{{ Educacion.fechaEdu }}</td>
-            <td>{{ Educacion.descripEdu }}</td>
-
-            <td *ngIf="isLogged">
-              <button
-                class="btn fa-regular fa-pen-to-square"
-                routerLink="/editedu/{{ Educacion.id }}"
-              ></button>
-            </td>
-            <td *ngIf="isLogged">
-              <button
-                class="btn fa-regular fa-trash-can"
-                (click)="delete(Educacion.id)"
-              ></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="col">
+      <div class="imagenes">
+        <img src="../../../assets/Fotos/LawOP.jpg" alt="">
+      </div>
     </div>
+    
   </div>
 </div>

@@ -1,19 +1,22 @@
 <div class="container">
-    <div class="row">
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <img src="../../../assets/Fotos/Perfil.jpg" id="perfil">
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div>
-                <h1 id="nombre"> {{persona.nombre}} {{persona.apellido}}</h1>
-                <h2>{{persona.titulo}}</h2>
-            </div>
-            <div>
-                <p>{{persona.descripPer}}</p>
-            </div>
-        </div>
-
+  <div class="row">
+    <div class="perfil">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <img src="../../../assets/Fotos/Perfil.jpg" id="perfil" />
+      </div>
     </div>
+    <div class="descrip">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div>
+          <h1 id="nombre">{{ persona.nombre }} {{ persona.apellido }}</h1>
+        </div>
+        <div>
+          <h2>{{ persona.titulo }}</h2>
+        </div>
+        <div>
+          <p>{{ persona.descripPer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
