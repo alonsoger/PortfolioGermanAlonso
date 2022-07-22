@@ -1,5 +1,33 @@
 * {
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #faebd7;
+    background-color: rgb(251, 252, 252);
+}
+
+.container {
+    display:flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px;
+    padding:0px;
+
+    max-width: 100%;
+
+
+}
+
+.row {
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 100%;
+}
+
+.btn {
+    font-size: 70px;
 }
