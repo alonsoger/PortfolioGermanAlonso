@@ -1,21 +1,59 @@
 <div class="container" *ngIf="educacion">
-    <div class="row">
-        <div>
-            <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
-                <div class="form-group">
-                    <label for="nombreEdu">Nombre Educacion</label>
-                    <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" [(ngModel)]="educacion.nombreEdu" required>
-                </div>
-                <div class="form-group">
-                    <label for="fechaEdu">Fecha</label>
-                    <input type="text" class="form-control" id="fechaEdu" name="fechaEdu" [(ngModel)]="educacion.fechaEdu" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripEdu">Descripcion:</label>
-                    <input type="text" class="form-control" id="descripEdu" name="descripEdu" [(ngModel)]="educacion.descripEdu" required>
-                </div>
-                <button class="btn btn-primary" >Actualizar educacion</button>
-            </form>
+  <div class="row">
+    <div>
+      <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+        <div class="form-group">
+          <label for="nombreEdu">Nombre Educacion:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombreEdu"
+            name="nombreEdu"
+            [(ngModel)]="educacion.nombreEdu"
+            required
+          />
         </div>
+        <div class="form-group">
+          <label for="fechaEdu">Fecha:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fechaEdu"
+            name="fechaEdu"
+            [(ngModel)]="educacion.fechaEdu"
+            required
+          />
+        </div>
+<!-- 
+        <div class="form-group">
+            <label for="fechaEdu">Fecha Fin:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="fechaEdu"
+              name="fechaEdu"
+              [(ngModel)]="fechaEdu"
+              required
+            />
+          </div>
+-->
+        <div class="form-group">
+          <label for="descripEdu">Descripcion:</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="descripEdu"
+            name="descripEdu"
+            rows="4"
+            [(ngModel)]="educacion.descripEdu"
+            required
+          >
+          </textarea>
+        </div>
+        <div class="Btnsend">
+          <button class="btn2 fa-solid fa-icicles"></button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>

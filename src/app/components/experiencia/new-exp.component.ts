@@ -25,7 +25,7 @@ export class NewExpComponent implements OnInit {
       this.router.navigate(['']);
     }, err => {
       alert("Falló");
-      this.router.navigate(['']);
+      window.location.reload();
     })
   }
 

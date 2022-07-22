@@ -6,14 +6,11 @@
 
 .container {
     display: flex;
-    margin: 0;
-    padding: 0;
-}
+    flex-direction: row;
 
-.row {
-
-    width: 2024px;
-
+    max-width: 100%;
+    min-height: 600px;
+    height: auto;
     background-image: url(../../../assets/Fotos/Banner/Escritorio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,6 +18,9 @@
 }
 
 .titulo {
+    display: flex;
+    flex-direction: row;
+    height: 150px; 
     align-self: center;
     color: white;
     padding: 30px;
@@ -31,80 +31,7 @@ div {
     padding: 5px 5px;
 }
 
-.onePiece {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: max-content;
-    height: 326px;
-}
-.esfera1 {
-    display: flex;
-    justify-content: flex-start;
-    height: 10px;
-    width: 10px;
-}
-.esfera1 > img {
-    height: 100px;
-    position: absolute;
-}
-.oneP > img {
-    transform: rotate(-12deg);
 
-    width: 600px;
-    height: 300px;
-}
-.twoP > img {
-    width: 300px;
-    height: 326px;
-}
-
-.twoP:hover {
-    border-radius: 100%;
-    background-color: rgba(231, 221, 80, 0.5);
-}
-.titulo {
-    display: flex;
-    flex-direction: row;
-    height: 150px; 
-}
-.jujutsu  > img {
-    height: 150px;
-    width: 550px;
-}
-
-
-.rickmorty {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-
-    width: 200px;
-}
-.happy {
-    display: flex;
-    align-items: center;
-}
-.happy > img {
-    transform: rotate(-15deg);
-    height: 200px;
-}
-.pikachu {
-    display: flex;
-    align-items: center;
-}
-.pikachu > img {
-    transform: rotate(15deg);
-    height: 200px;
-}
-.morty {
-    display: flex;
-    align-items: center;
-}
-.morty > img {
-    height: 210px;
-}
 
 .picklerick {
     display: flex;

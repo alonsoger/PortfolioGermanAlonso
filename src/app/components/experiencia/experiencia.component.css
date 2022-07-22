@@ -1,5 +1,5 @@
 * {
-    margin: 5px 0px 0px 0px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     color: #faebd7;
@@ -24,6 +24,20 @@
     background-size: cover;
 */
 }
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+.btn {
+    align-self: center;
+    height: 70px;
+    width: 80px;
+    font-size: 40px;
+    border: none;
+  }
 
 h3 {
     font-size: 80px;

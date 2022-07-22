@@ -1,36 +1,41 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #faebd7;
- 
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: #faebd7;
 }
 
 .container {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-    padding: 5px 0px;
-    margin: 5px auto;
-    max-width: 90%; 
-
-    /*border: 2px solid #faebd7;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-    ) ,url("../../../assets/Fotos/Libros.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;*/
+  padding: 5px 0px;
+  margin: 5px auto;
+  max-width: 90%;
 }
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn {
+    align-self: center;
+    height: 70px;
+    width: 80px;
+    font-size: 40px;
+    border: none;
+}
+
 
 
 h3 {
-    font-size: 80px;
-    font-weight: bold;    
+  font-size: 80px;
+  font-weight: bold;
 }
 h4 {
-    font-size: 55px;
+  font-size: 55px;
 }

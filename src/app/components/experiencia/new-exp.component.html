@@ -1,17 +1,35 @@
 <div class="container">
-    <div class="row">
-        <div>
-            <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
-                <div class="form-group">
-                    <label for="nombreExp">Nombre Empresa</label>
-                    <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="nombreExp" required>
-                </div>
-                <div class="form-group">
-                    <label for="descripExp">Descripcion tareas:</label>
-                    <input type="text" class="form-control" id="descripExp" name="descripExp" [(ngModel)]="descripExp" required>
-                </div>
-                <button class="btn btn-primary" >Agregar Experiencia</button>
-            </form>
+  <div class="row">
+    <div>
+      <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
+        <div class="form-group">
+          <label for="nombreExp">Nombre Empresa:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombreExp"
+            name="nombreExp"
+            [(ngModel)]="nombreExp"
+            required
+          />
         </div>
+        <div class="form-group">
+          <label for="descripExp">Descripcion tareas:</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="descripExp"
+            name="descripExp"
+            rows="4"
+            [(ngModel)]="descripExp"
+            required
+          >
+          </textarea>
+        </div>
+        <div class="Btnsend">
+          <button class="btn2 fa-solid fa-icicles"></button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>

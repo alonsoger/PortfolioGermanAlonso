@@ -1,36 +1,48 @@
 <div class="container">
-    <div class="row">
-
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h3>Educacion</h3>
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary b" routerLink="/newedu" *ngIf="isLogged">
-                Nueva Educacion
-            </button>
-        </div>
-
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Educacion of educacion">
-                    <td>{{Educacion.nombreEdu}}</td>
-                    <td>{{Educacion.fechaEdu}}</td>
-                    <td>{{Educacion.descripEdu}}</td>
-                    
-                    <td *ngIf="isLogged">
-                        <button class="" routerLink="/editedu/{{Educacion.id}}">
-                            Editar
-                        </button>
-                    </td>
-                    
-                    <td *ngIf="isLogged">
-                        <button class="" (click)="delete(Educacion.id)">
-                            Borrar
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
+  <div class="row">
+    <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h3>Educacion</h3>
+      <button
+        type="button"
+        class="btn fa-regular fa-square-plus"
+        routerLink="/newedu"
+        *ngIf="isLogged"
+      ></button>
     </div>
+
+    <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <table class="table align-middle table-borderless table-hover">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <!--<th>Fecha Fin</th>-->
+            <th>Descripcion</th>
+            <th td *ngIf="isLogged">Actualizar</th>
+            <th td *ngIf="isLogged">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Educacion of educacion">
+            <td>{{ Educacion.nombreEdu }}</td>
+            <td>{{ Educacion.fechaEdu }}</td>
+            <td>{{ Educacion.descripEdu }}</td>
+
+            <td *ngIf="isLogged">
+              <button
+                class="btn fa-regular fa-pen-to-square"
+                routerLink="/editedu/{{ Educacion.id }}"
+              ></button>
+            </td>
+            <td *ngIf="isLogged">
+              <button
+                class="btn fa-regular fa-trash-can"
+                (click)="delete(Educacion.id)"
+              ></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

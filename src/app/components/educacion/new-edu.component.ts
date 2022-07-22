@@ -11,7 +11,7 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class NewEduComponent implements OnInit {
 
   nombreEdu: string = '';
-  fechaEdu: number;
+  fechaEdu: string = '';
   descripEdu: string = '';
 
   constructor(private eduService: EducacionService, private router: Router) { }
@@ -27,7 +27,7 @@ export class NewEduComponent implements OnInit {
       this.router.navigate(['']);
     }, err => {
       alert("Falló");
-      this.router.navigate(['']);
+      window.location.reload();
     }
     )
   }
