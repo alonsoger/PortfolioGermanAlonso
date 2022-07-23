@@ -7,21 +7,29 @@
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
 
     max-width: 100%;
     min-height: 600px;
     height: auto;
-    background-image: url(../../../assets/Fotos/Banner/Escritorio.jpg);
+    background-image: url(../../../assets/Fotos/Escritorio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
-
-.titulo {
+.row {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+}
+
+.titulo {
+    margin: 120px 0px 0px 60px;
     height: 150px; 
-    align-self: center;
-    color: white;
     padding: 30px;
+}
+
+h1 {
+    color: rgb(251, 252, 252);
+    font-size:90px;
 }

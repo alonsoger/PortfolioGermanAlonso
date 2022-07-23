@@ -7,16 +7,12 @@
 
 .container {
     display:flex;
-
     justify-content: center;
     align-items: center;
 
     margin: 0px;
     padding:0px;
-
     max-width: 100%;
-
-
 }
 
 .row {
@@ -24,10 +20,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     max-width: 100%;
 }
 
+div {
+    margin: 5px;
+}
+
+.title {
+    max-width: 550px; 
+}
+
 .btn {
+    background-color:  transparent;
+    border: none;
     font-size: 70px;
+}
+
+.btn2 {
+    border: none;
+    font-size: 45px;
+}
+
+.inFoot{
+    border: 1px solid rgb(28, 40, 51);
+    width: 400px;
 }

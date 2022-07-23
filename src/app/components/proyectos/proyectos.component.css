@@ -3,8 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    color: rgb(251, 252, 252);
     background-color: rgb(28, 40, 51);
 }
