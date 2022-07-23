@@ -38,7 +38,9 @@
     width: 80px;
     font-size: 40px;
     border: none;
+    background:transparent;
 }
+
 
 
 .btn2 {
@@ -47,6 +49,7 @@
   height: 70px;
   font-size: 50px;
   border: none;
+  background:transparent;
 }
 
 
@@ -59,7 +62,26 @@ h4 {
   font-size: 55px;
 }
 
-.imagenes > img {
-  width: 300px;
+.imagenes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  overflow: auto;
+}
 
+.imagenes img {
+  flex-shrink: 0;
+  width: 700px;
+  object-fit: cover;
+  position: sticky;
+  top: 0;
+
+}
+
+.table-hover tbody tr:hover td {
+  color:rgb(28, 40, 51);
+  background: rgb(251, 252, 252);
 }

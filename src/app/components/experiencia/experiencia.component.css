@@ -8,11 +8,18 @@
 
 .container {
     display:flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 5px auto;
     max-width: 100%;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
 .title {
@@ -27,6 +34,7 @@
     width: 80px;
     font-size: 40px;
     border: none;
+    background:transparent;
   }
 
 .btn3 {
@@ -44,4 +52,9 @@ h3 {
 
 h4 {
     font-size: 55px;
+}
+
+.table-hover tbody tr:hover td {
+  color:rgb(28, 40, 51);
+  background: rgb(251, 252, 252);
 }
