@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col" id="tabla">
       <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <button type="button" class="btn2 fa-solid fa-hat-wizard"></button>
+        <button type="button" class="btn2 fa-solid fa-hat-wizard" (click)="onClick()"></button>
         <h3>Educación</h3>
         <button
           type="button"
@@ -13,7 +13,7 @@
       </div>
 
       <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <table class="table align-middle table-borderless table-hover" >
+        <table class="table align-middle table-borderless table-hover">
           <thead>
             <tr>
               <th>Nombre</th>

@@ -27,9 +27,53 @@
     margin: 120px 0px 0px 60px;
     height: 150px; 
     padding: 30px;
+
 }
 
 h1 {
     color: rgb(251, 252, 252);
     font-size:90px;
+    font-weight: 600;
+    position: relative;
 }
+/*
+h1::before, h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+h1::before {
+    background-color: #000;
+    animation: type 3s steps(25) 2s forwards infinite;
+    width: 100%;
+}
+
+h2::after {
+    width:2px;
+    background: #fff;
+    color: #fff;
+    opacity: 1;
+    animation: type 3s steps(15) 1s forwards infinite,
+        blink 0.6 steps(5) infinite;
+}
+
+@keyframes type {
+    to {
+        left: 100%;
+    }
+    
+}
+
+@keyframes type {
+    0% , 50% {
+        opacity: 0;
+    }
+    51% , 100% {
+        opacity: 1;
+    }
+    
+}
+*/

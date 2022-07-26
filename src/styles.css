@@ -7,13 +7,24 @@
     font-family: 'Raleway', sans-serif;
 }
 
-body{
+body {
     background-color: rgb(251, 252, 252);
 }
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(251, 252, 252);
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgb(28, 40, 51);
+}
+
+
 
 /*
 Colores:
     rgb(28, 40, 51); OSCURO
     rgb(251, 252, 252); CLARO 
-
+#144F5E;
 */

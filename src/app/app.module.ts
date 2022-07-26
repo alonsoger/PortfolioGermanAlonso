@@ -54,7 +54,7 @@ import { EditEduComponent } from './components/educacion/edit-edu.component';
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     interceptorProvider

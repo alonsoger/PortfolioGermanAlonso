@@ -1,48 +1,50 @@
 <div class="container">
   <div class="row">
-    <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <button class="btn3 fa-solid fa-snowplow"></button>
-      <h3>Experiencia</h3>
-      <button
-        type="button"
-        class="btn fa-regular fa-square-plus"
-        routerLink="/newexp"
-        *ngIf="isLogged"
-      ></button>
-    </div>
+    <div class="col">
+      <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button class="btn3 fa-solid fa-snowplow"></button>
+        <h3>Experiencia</h3>
+        <button
+          type="button"
+          class="btn fa-regular fa-square-plus"
+          routerLink="/newexp"
+          *ngIf="isLogged"
+        ></button>
+      </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <table class="table align-middle table-borderless table-hover ">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <!--<th>Fecha Inicio</th>-->
-            <!--<th>Fecha Fin</th>-->
-            <th>Descripcion</th>
-            <th td *ngIf="isLogged">Actualizar</th>
-            <th td *ngIf="isLogged">Borrar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let ExpLaboral of experiencia">
-            <td>{{ ExpLaboral.nombreExp }}</td>
-            <td>{{ ExpLaboral.descripExp }}</td>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="table align-middle table-borderless table-hover">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <!--<th>Fecha Inicio</th>-->
+              <!--<th>Fecha Fin</th>-->
+              <th>Descripcion</th>
+              <th td *ngIf="isLogged">Actualizar</th>
+              <th td *ngIf="isLogged">Borrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ExpLaboral of experiencia">
+              <td>{{ ExpLaboral.nombreExp }}</td>
+              <td>{{ ExpLaboral.descripExp }}</td>
 
-            <td *ngIf="isLogged">
-              <button
-                class="btn fa-regular fa-pen-to-square"
-                routerLink="/editexp/{{ ExpLaboral.id }}"
-              ></button>
-            </td>
-            <td *ngIf="isLogged">
-              <button
-                class="btn fa-regular fa-trash-can"
-                (click)="delete(ExpLaboral.id)"
-              ></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <td *ngIf="isLogged">
+                <button
+                  class="btn fa-regular fa-pen-to-square"
+                  routerLink="/editexp/{{ ExpLaboral.id }}"
+                ></button>
+              </td>
+              <td *ngIf="isLogged">
+                <button
+                  class="btn fa-regular fa-trash-can"
+                  (click)="delete(ExpLaboral.id)"
+                ></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
