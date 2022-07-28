@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProyectosComponent implements OnInit {
 
+  isLogged = false;
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,46 @@
-<h1> PROYECTOS </h1>
+<div class="container">
+    <div class="row">
+      <div class="col" id="tabla">
+        <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <button type="button" class="btn2 fa-solid fa-hat-wizard"></button>
+          <h3>Proyectos</h3>
+          <button
+            type="button"
+            class="btn fa-regular fa-square-plus"
+            routerLink="/newedu"
+            *ngIf="isLogged"
+          ></button>
+        </div>
+  
+        <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <table class="table align-middle table-borderless table-hover">
+            <tbody>
+              <tr>
+                <td>
+                    <div>
+                        <figure class="image" src="../../../assets/Fotos/invierno1.jpg" >
+                            <img src="../../../assets/Fotos/invierno1.jpg" alt="">
+                            <figcaption>
+                                <h1>Proyecto TaskList</h1>
+                                <a href="" target="_blank" >link al git del proyecto</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </td>
+                <td *ngIf="isLogged">
+                  <button class="btn fa-regular fa-pen-to-square"
+                  ></button>
+                </td>
+                <td *ngIf="isLogged">
+                  <button
+                    class="btn fa-regular fa-trash-can"
+                  ></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
