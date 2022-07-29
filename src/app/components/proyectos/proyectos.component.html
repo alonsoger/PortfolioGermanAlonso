@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col" id="tabla">
       <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <button type="button" class="btn2 fa-solid fa-hat-wizard"></button>
+        <button type="button" class="btn2 fa-solid fa-wrench"></button>
         <h3>Proyectos</h3>
         <button
           type="button"
@@ -13,29 +13,72 @@
       </div>
 
       <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <table class="table align-middle table-borderless table-hover">
-        
-          <tbody>
+        <table class="table align-middle table-borderless">
+          <thead>
             <tr>
-              <!--Aca va el ngFor que recorre las imagenes con sus URl y descripciones-->
-              <th scope="row">
-                <div class="pick">
-                  <img src="../../../assets/Fotos/LawOP.jpg" alt="" width="600px"/>
-                  <div class="pickback">
-                    <h1>Titulo</h1>
-                    <button type="button"><a href="">View</a></button>
+              <th>
+                <div id="pick">
+                  <img src="../../../assets/Fotos/LawOP.jpg" alt="" />
+                  <div id="pickback">
+                    <h1>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </h1>
+                    <button id="view" type="button"><a href="">View</a></button>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div id="pick">
+                  <img src="../../../assets/Fotos/LawOP.jpg" alt="" />
+                  <div id="pickback">
+                    <h1>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </h1>
+                    <button id="view" type="button"><a href="">View</a></button>
                   </div>
                 </div>
               </th>
               <th *ngIf="isLogged">
-                <button class="btn fa-regular fa-pen-to-square" routerLink=""> </button>
+                <button
+                  class="btn fa-regular fa-pen-to-square"
+                  routerLink=""
+                ></button>
               </th>
               <th *ngIf="isLogged">
                 <button class="btn fa-regular fa-trash-can"></button>
               </th>
             </tr>
-          </tbody>
-
+          </thead>
+          <!--
+          <tbody>
+            <tr>
+             Aca va el ngFor que recorre las imagenes con sus URl y descripciones
+              <th scope="col">
+                <div id="pick">
+                  <img src="../../../assets/Fotos/LawOP.jpg" alt=""/>
+                  <div id="pickback">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
+                    <button id="view" type="button"><a href="">View</a></button>
+                  </div>
+                </div>
+                <div id="pick">
+                  <img src="../../../assets/Fotos/LawOP.jpg" alt=""/>
+                  <div id="pickback">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
+                    <button id="view" type="button"><a href="">View</a></button>
+                  </div>
+                </div>
+                <div id="pick">
+                  <img src="../../../assets/Fotos/LawOP.jpg" alt=""/>
+                  <div id="pickback">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
+                    <button id="view" type="button"><a href="">View</a></button>
+                  </div>
+                </div>
+              </th>
+              
+            </tr>
+          </tbody>-->
         </table>
       </div>
     </div>

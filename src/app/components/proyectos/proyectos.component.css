@@ -50,22 +50,48 @@ h3 {
   font-weight: bold;
 }
 
-/*
-.table-hover tbody tr:hover td {
-  color:rgb(28, 40, 51);
-  background: rgb(251, 252, 252);
-}
-Este marca la tabla cuando pasamos el mouse por encima de una fila. 
-*/
-
-.pick {
+div#pick {
   display: flex;
   justify-content: center;
   align-items: center;
-  position:relative;
+
+
+  width: 500px;
+  height: 250px;
+
 }
 
-.pickback {
+div#pick > img {
+  width: 450px;
+  height: 250px;
+  
+}
 
-  position:absolute;
+div#pickback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 250px;
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(22, 22, 22, 0.5);
+
+}
+
+div#pick:hover div#pickback {
+  opacity: 1;
+}
+
+.th {
+  min-height: 350px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button#view {
+  border: 1px solid;
 }
