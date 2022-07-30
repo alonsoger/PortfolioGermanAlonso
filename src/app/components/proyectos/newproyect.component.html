@@ -36,10 +36,13 @@
             [(ngModel)]="proyFoto"
             required
             value="x"
+            (change)="capFile($event)"
           />
-          <div>
-
+        <!-- Futura Previsualizacion de la imagen a subir-->
+          <div class="form-group" *ngIf="prevImg">
+            <img [src]="prevImg" alt="">
           </div>
+        
         </div>
         <div class="Btnsend">
           <button class="btn2 fa-solid fa-icicles"></button>

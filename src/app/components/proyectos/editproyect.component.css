@@ -1,0 +1,85 @@
+* {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    margin: auto;
+    width: 100%;
+    max-width: 725px;
+    min-height: 600px;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgb(28, 40, 51);
+    background-image: url(../../../assets/Fotos/invierno3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .row {
+    border-radius: 10px;
+    height: 600px;
+    width: 100%;
+    background-color: rgb(28, 40, 51, 0.9);
+  }
+  
+  .form-group > label {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  
+    font-size: 29px;
+    color: rgb(245, 245, 245, 0.9);
+    width: 300px;
+    height: 40px;
+  }
+  
+  .form-group > input {
+    display: flex;
+  
+    text-align: center;
+  
+    width: 300px;
+    height: 48px;
+    font-size: 20px;
+    margin-top: 3px;
+  
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(245, 245, 245);
+  }
+  
+  .form-group > textarea {
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(245, 245, 245);
+  }
+  
+  .Btnsend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 300px;
+    height: 100px;
+  }
+  
+  .btn2 {
+    height: 70px;
+    width: 80px;
+    font-size: 60px;
+    border: none;
+    color: rgb(245, 245, 245);
+    background-color: transparent;
+  }
+  
+  .btn2:hover {
+    color: rgba(76, 194, 230, 0.9);
+  }
+  

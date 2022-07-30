@@ -52,9 +52,9 @@ h3 {
 
 div#pick {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-
 
   width: 500px;
   height: 250px;
@@ -64,6 +64,7 @@ div#pick {
 div#pick > img {
   width: 450px;
   height: 250px;
+  background-color: transparent;
   
 }
 
@@ -81,17 +82,49 @@ div#pickback {
 }
 
 div#pick:hover div#pickback {
+
+  transition: opacity 0.5s;
   opacity: 1;
 }
 
-.th {
-  min-height: 350px;
-}
-
 a {
+  background-color: transparent;
   text-decoration: none;
 }
 
 button#view {
+
+  background-color: rgba(22, 22, 22, 0.5);
   border: 1px solid;
+  border-radius: 50px;
+}
+
+button#view:hover {
+  background-color:rgb(251, 252, 252, 0.5);
+}
+
+ .proytitle {
+  word-break: break-word;
+  background-color: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+}
+
+div {
+  padding-bottom: 5px;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

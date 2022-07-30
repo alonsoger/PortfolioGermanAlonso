@@ -12,20 +12,59 @@
         ></button>
       </div>
 
+      <div class="content">
+        <div *ngFor="let Proyecto of proyecto">
+          <div class="botones">
+          <div *ngIf="isLogged">
+            <button
+              class="btn fa-regular fa-pen-to-square"
+              routerLink="/editproyect/{{Proyecto.id}}"
+            ></button>
+          </div>
+          <div *ngIf="isLogged" class="delete">
+            <button
+              class="btn fa-regular fa-trash-can"
+              (click)="delete(Proyecto.id)"
+            ></button>
+          </div>
+        </div>
+          <div id="pick">
+            <img [src]="Proyecto.proyFoto"alt="" />
+
+            <!--ACA VA LA FOTO QUE SUBIMOS-->
+            <div id="pickback">
+              <h1 class="proytitle">
+                {{ Proyecto.proyTitulo }}
+              </h1>
+              <a href="{{ Proyecto.proyUrl }}" target="_blank">
+                <button id="view" type="button">Visit Website..</button>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBAMOS CON TABLA.. 
+
+
       <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <table class="table align-middle table-borderless">
           <thead>
             <tr *ngFor="let Proyecto of proyecto">
               <th>
                 <div id="pick">
-                  <img src="{{Proyecto.proyFoto}}" alt="" /> <!--ACA VA LA FOTO QUE SUBIMOS-->
+                  <img src="../../../assets/Fotos/LawOP.jpg" alt="" /> 
                   <div id="pickback">
-                    <h1>
+                    <h1 class="proytitle">
                       {{Proyecto.proyTitulo}}
                     </h1>
                     <a href='{{Proyecto.proyUrl}}' target="_blank">
                       <button id="view" type="button">
-                        View
+                        Visit Website..
                       </button>
                     </a>
                   </div>
@@ -40,6 +79,4 @@
           </thead>
         </table>
       </div>
-    </div>
-  </div>
-</div>
+-->
