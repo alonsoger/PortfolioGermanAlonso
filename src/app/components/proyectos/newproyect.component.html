@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div>
-      <form #f="ngForm" novalidate>
+      <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
         <div class="form-group">
             <label>URL: </label>
             <input
@@ -9,6 +9,7 @@
               class="form-control"
               id="urlPro"
               name="urlPro"
+              [(ngModel)]="proyUrl"
               placeholder="URL"
               required
             />
@@ -20,6 +21,7 @@
             class="form-control"
             id="titleProyect"
             name="titleProyect"
+            [(ngModel)]="proyTitulo"
             placeholder="Titulo"
             required
           />
@@ -31,6 +33,7 @@
             class="form-control"
             id="fotoProyect"
             name="fotoProyect"
+            [(ngModel)]="proyFoto"
             required
             value="x"
           />
