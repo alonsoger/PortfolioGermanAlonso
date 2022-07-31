@@ -36,8 +36,14 @@
             [(ngModel)]="proyFoto"
             required
             value="x"
+            accept="image"
             (change)="capFile($event)"
           />
+        <!-- Previsualizacion. 
+        <div class="prevImg">
+          <img [src]="imgURL">
+        </div>
+        -->
         </div>
         <div class="Btnsend">
           <button class="btn2 fa-solid fa-icicles"></button>
