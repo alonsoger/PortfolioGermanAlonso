@@ -16,6 +16,18 @@ export class PersonaService {
     return this.httpClient.get<persona>(this.Url + 'traer/perfil');
   }
 
+  public save(persona: persona): Observable<any> {
+    return this.httpClient.post<any>(this.Url + `crear`, persona);
+  }
+
+  public update(id: number, persona: persona): Observable<any> {
+    return this.httpClient.put<any>(this.Url + `update/${id}`, persona);
+  }
+
+  public delete(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.Url + `delete/${id}`);
+  }
+
 
 
 }

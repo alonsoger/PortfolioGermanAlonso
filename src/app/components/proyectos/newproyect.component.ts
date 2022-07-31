@@ -17,25 +17,39 @@ export class NewproyectComponent implements OnInit {
 
   public archivos:any = [];
   public prevImg: string = '';
-  public imgURL = ""; //Usando este podemos hacer la previsualizacion. 
+  public imgURL: string = ''; //Usando este podemos hacer la previsualizacion. 
 
   constructor(private proyService: ProyectoService, private router: Router) { }
 
   ngOnInit(): void {
   } 
-  
+
   capFile(event: any) {
-    if(event.target.files.length > 0) {
-      const fileCap = event.target.files[0];
+    const fileCap = event.target.files[0];
+    this.extraerBase64(fileCap).then((imagen: any) => {
+    this.prevImg = imagen.base;
+
+    })
+    console.log(this.prevImg);
+
+    this.prevImg = this.proyFoto;
+    //this.archivos.push(fileCap);
+    //console.log(event.target.files);
+
+    /*if(event.target.files.length > 0) {
+      
       const reader = new FileReader();
       reader.readAsDataURL(fileCap);
       reader.onload = (event: any) => {
         this.imgURL = event.target.result;
+        console.log(this.imgURL);
+        
       }
-      
       this.imgURL = this.proyFoto;
-    }
+    }*/
+  
  }
+
 
   onCreate(): void {
     const proyecto = new Proyecto(this.proyUrl, this.proyTitulo, this.proyFoto);
@@ -47,21 +61,9 @@ export class NewproyectComponent implements OnInit {
       window.location.reload();
     })
   }
-
- 
     
-    
-    /*
-      this.extraerBase64(fileCap).then((imagen: any) => {
-      this.prevImg = imagen.base;
-      console.log(imagen)
-    })
-    //this.archivos.push(fileCap);
-    //console.log(event.target.files);
-    */
- 
-
-  /*extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
+  
+  extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
     try {
       const unsafeImg = window.URL.createObjectURL($event);
       const image = this['sanitizer'].bypassSecurityTrustUrl(unsafeImg);
@@ -80,7 +82,7 @@ export class NewproyectComponent implements OnInit {
     } catch (e) {
       return null;
     }
-  })*/
+  })
 
 
 }

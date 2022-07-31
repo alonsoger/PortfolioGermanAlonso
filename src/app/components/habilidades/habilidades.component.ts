@@ -12,4 +12,5 @@ export class HabilidadesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
