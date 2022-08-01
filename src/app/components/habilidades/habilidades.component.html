@@ -1,9 +1,10 @@
 
 <div class="container">
   <!--------------------------------- HTML -------------------------->
+  <div *ngFor="let Habilidades of habilidades">
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <circle-progress
-      [percent]="85"
+      [percent]="habilidades.porcentaje"
       [radius]="100"
       [clockwise]="true"
       [responsive]="true"
@@ -16,7 +17,7 @@
       [titleColor]="'rgb(28, 40, 51);'"
       [titleFontSize]="'20px'"
       [unitsFontSize]="'20px'"
-      [subtitle]="'HTML'"
+      [subtitle]="habilidades.nombreHab"
       [subtitleFontSize]="'35px'"
       [subtitleColor]="'rgb(28, 40, 51);'"
       [outerStrokeGradient]="true"
@@ -29,7 +30,8 @@
       [animationDuration]="900"
     ></circle-progress>
   </div>
-  <!--------------------------------- CSS -------------------------->
+</div>
+  <!--------------------------------- CSS ------------------------
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <circle-progress
       [percent]="70"
@@ -57,8 +59,8 @@
       [animation]="true"
       [animationDuration]="900"
     ></circle-progress>
-  </div>
-  <!--------------------------------- jAVASCRIPT -------------------------->
+  </div>-->
+  <!--------------------------------- jAVASCRIPT ------------------------
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <circle-progress
       [percent]="68"
@@ -86,8 +88,8 @@
       [animation]="true"
       [animationDuration]="900"
     ></circle-progress>
-  </div>
-  <!--------------------------------- ANGULAR -------------------------->
+  </div>-->
+  <!--------------------------------- ANGULAR ------------------------
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ">
     <circle-progress
       [percent]="55"
@@ -115,8 +117,8 @@
       [animation]="true"
       [animationDuration]="900"
     ></circle-progress>
-  </div>
-  <!--------------------------------- MYSQL -------------------------->
+  </div>-->
+  <!--------------------------------- MYSQL ------------------------
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <circle-progress
       [percent]="85"
@@ -144,8 +146,8 @@
       [animation]="true"
       [animationDuration]="900"
     ></circle-progress>
-  </div>
-  <!--------------------------------- NODE ------------------------ -->
+  </div>-->
+  <!--------------------------------- NODE ------------------------ 
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <circle-progress
       [percent]="90"
@@ -173,8 +175,8 @@
       [animation]="true"
       [animationDuration]="900"
     ></circle-progress>
-  </div>
-  <!--------------------------------- GITHUB -------------------------->
+  </div>-->
+  <!--------------------------------- GITHUB ------------------------
   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
     <circle-progress
       [percent]="70"
@@ -202,8 +204,8 @@
       [animation]="true"
       [animationDuration]="900"
     ></circle-progress>
-  </div>
-    <!--------------------------------- INGLES -------------------------->
+  </div>-->
+    <!--------------------------------- INGLES ------------------------
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
       <circle-progress
         [percent]="85"
@@ -231,5 +233,5 @@
         [animation]="true"
         [animationDuration]="900"
       ></circle-progress>
-    </div>
+    </div>-->
 </div>
