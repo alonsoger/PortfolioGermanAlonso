@@ -10,11 +10,10 @@
     <div class="descrip">
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
-        <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
           <div *ngIf="isLogged" class="divbtn">
             <button
               class="btn fa-regular fa-pen-to-square"
-              routerLink=""
+              routerLink="/editsobremi/{{persona.id}}"
             ></button>
           </div>
           <div class="group">
@@ -26,9 +25,8 @@
             <h2>{{ persona.titulo }}</h2>
           </div>
           <div class="group">
-            <p>{{ persona.descripPer }}</p>
+              {{ persona.descripPer }}
           </div>
-        </form>
 
       </div>
     </div>
