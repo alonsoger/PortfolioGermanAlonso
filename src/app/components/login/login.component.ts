@@ -65,7 +65,6 @@ export class LoginComponent implements OnInit {
     } else {
       //Corremos las validaciones para que se ejecuten los mensajes de error. 
       this.form.markAllAsTouched();
-      console.log('Algun error');
     }
   }
 

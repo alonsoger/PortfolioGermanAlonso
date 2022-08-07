@@ -24,6 +24,7 @@ export class NewproyectComponent implements OnInit {
   ngOnInit(): void {
   } 
 
+  /*
   capFile(event: any) {
     const fileCap = event.target.files[0];
     this.extraerBase64(fileCap).then((imagen: any) => {
@@ -46,10 +47,10 @@ export class NewproyectComponent implements OnInit {
         
       }
       this.imgURL = this.proyFoto;
-    }*/
+    }
   
  }
-
+*/
 
   onCreate(): void {
     const proyecto = new Proyecto(this.proyUrl, this.proyTitulo, this.proyFoto);
@@ -62,7 +63,7 @@ export class NewproyectComponent implements OnInit {
     })
   }
     
-  
+  /*
   extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {
     try {
       const unsafeImg = window.URL.createObjectURL($event);
@@ -83,6 +84,7 @@ export class NewproyectComponent implements OnInit {
       return null;
     }
   })
+  */
 
 
 }
