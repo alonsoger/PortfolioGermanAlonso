@@ -13,16 +13,10 @@ interface HtmlInputEvent extends Event {
   styleUrls: ['./newproyect.component.css']
 })
 export class NewproyectComponent implements OnInit {
-  [x: string]: any;
   
   proyUrl: string = '';
   proyTitulo: string = '';
-  proyFoto: string = '';
-
-  public archivos:any = [];
-  public prevImg: string = '';
-  public imgURL: string = ''; //Usando este podemos hacer la previsualizacion. 
-
+  proyFoto: File | undefined;
 
   file: File | undefined;
   photoSelected: string | ArrayBuffer;
@@ -32,18 +26,34 @@ export class NewproyectComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onPhotoSelected(event: HtmlInputEvent): void {
+  onPhotoSelected(event: any): void {
     if (event.target.files && event.target.files[0]) {
-      this.file = <File>event.target.files[0];
+      this.proyFoto = <File>event.target.files[0];
       //Image preview
       const reader = new FileReader();
-      
       reader.onload = event => this.photoSelected = reader.result;
-      reader.readAsDataURL(this.file);
+      reader.readAsDataURL(this.proyFoto);
     }
   }
 
-  /*
+  /*uploadPhoto(title: HTMLInputElement, description: HTMLTextAreaElement): boolean {
+    this.proyService.save(title.value, description.value, this.file)
+      .subscribe(res => console.log(res),
+        err => console.log(err))
+    return false;
+  }
+*/
+  onCreate(): void {
+    const proyecto = new Proyecto(this.proyUrl, this.proyTitulo, this.proyFoto);
+    this.proyService.save(proyecto).subscribe(data => {
+      alert("Proyecto añadido");
+      this.router.navigate(['']);
+    }, err => {
+      alert("Falló");
+      window.location.reload();
+    })
+  }
+/*
   capFile(event: any) {
     const fileCap = event.target.files[0];
     this.extraerBase64(fileCap).then((imagen: any) => {
@@ -71,16 +81,7 @@ export class NewproyectComponent implements OnInit {
  }
 */
 
-  onCreate(): void {
-    const proyecto = new Proyecto(this.proyUrl, this.proyTitulo, this.proyFoto);
-    this.proyService.save(proyecto).subscribe(data => {
-      alert("Proyecto añadid0");
-      this.router.navigate(['']);
-    }, err => {
-      alert("Falló");
-      window.location.reload();
-    })
-  }
+
     
   /*
   extraerBase64 = async ($event: any) => new Promise((resolve, reject) => {

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div>
+    <div >
       <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
         <div class="form-group">
             <label>URL: </label>
@@ -11,6 +11,7 @@
               name="urlPro"
               [(ngModel)]="proyUrl"
               placeholder="URL"
+              
               required
             />
           </div>
@@ -39,16 +40,12 @@
             required
             
           />
-          <img [src]="photoSelected || 'assets/minecraft.png'" class="img-fluid" alt="No image" (click)="photoInput.click()">
-        <!-- Previsualizacion. 
-        <div class="prevImg">
-          <img [src]="imgURL">
-        </div>
-        -->
+          <img [src]="photoSelected || 'assets/Fotos/Noimage.jpg'" class="pickPrev" alt="No image" (click)="photoInput.click()">
         </div>
         <div class="Btnsend">
           <button class="btn2 fa-solid fa-icicles"></button>
         </div>
+       
       </form>
     </div>
   </div>

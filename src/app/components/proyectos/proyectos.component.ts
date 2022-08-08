@@ -29,7 +29,6 @@ export class ProyectosComponent implements OnInit {
 
   cargaProy(): void {
     this.proyService.lista().subscribe(data => {this.proyecto = data;})
-  
   }
 
   delete(id?: number) {

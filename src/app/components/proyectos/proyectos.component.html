@@ -14,6 +14,7 @@
 
       <div class="content">
         <div *ngFor="let Proyecto of proyecto">
+
           <div class="botones">
           <div *ngIf="isLogged">
             <button
@@ -29,7 +30,7 @@
           </div>
         </div>
           <div id="pick">
-            <img [src]="Proyecto.proyFoto" alt="" />
+            <img [src]="'../../../assets/Fotos/Libros.jpg' || Proyecto.proyFoto" alt="" />
 
             <!--ACA VA LA FOTO QUE SUBIMOS-->
             <div id="pickback">

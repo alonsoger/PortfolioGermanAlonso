@@ -23,6 +23,9 @@
 }
 
 .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 600px;
   width: 100%;
   background-color: rgb(28, 40, 51, 0.9);
@@ -82,7 +85,7 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-.prevImg > img {
-  width: 400px;
-  height: 300px;
+.pickPrev {
+  max-width: 500px;
+  height: 200px;
 }
