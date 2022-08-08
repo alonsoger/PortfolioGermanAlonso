@@ -3,6 +3,10 @@ import { Router } from '@angular/router';
 import { Proyecto } from 'src/app/modelo/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 
+interface HtmlInputEvent extends Event {
+  target: HTMLInputElement & EventTarget;
+}
+
 @Component({
   selector: 'app-newproyect',
   templateUrl: './newproyect.component.html',
@@ -19,10 +23,25 @@ export class NewproyectComponent implements OnInit {
   public prevImg: string = '';
   public imgURL: string = ''; //Usando este podemos hacer la previsualizacion. 
 
+
+  file: File | undefined;
+  photoSelected: string | ArrayBuffer;
+
   constructor(private proyService: ProyectoService, private router: Router) { }
 
   ngOnInit(): void {
-  } 
+  }
+
+  onPhotoSelected(event: HtmlInputEvent): void {
+    if (event.target.files && event.target.files[0]) {
+      this.file = <File>event.target.files[0];
+      //Image preview
+      const reader = new FileReader();
+      
+      reader.onload = event => this.photoSelected = reader.result;
+      reader.readAsDataURL(this.file);
+    }
+  }
 
   /*
   capFile(event: any) {

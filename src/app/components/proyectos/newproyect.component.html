@@ -30,15 +30,16 @@
           <label for="fotoProyect">Foto</label>
           <input
             type="file"
-            class="form-control"
+            class="d-none"
             id="fotoProyect"
+            #photoInput
             name="fotoProyect"
+            (change)="onPhotoSelected($event)"
             [(ngModel)]="proyFoto"
             required
-            value="x"
-            accept="image"
             
           />
+          <img [src]="photoSelected || 'assets/minecraft.png'" class="img-fluid" alt="No image" (click)="photoInput.click()">
         <!-- Previsualizacion. 
         <div class="prevImg">
           <img [src]="imgURL">
