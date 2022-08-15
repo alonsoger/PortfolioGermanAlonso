@@ -11,7 +11,8 @@ import { LoginUsuario } from '../modelo/login-usuario';
 })
 export class AuthService {
 //Agregamos la url de la ApiRest y el token de firma. 
-  authURL = 'http://localhost:8080/auth/'; //URL APIREST 
+  //authURL = 'http://localhost:8080/auth/'; //URL APIREST 
+  authURL = 'https://bkendportfolio.herokuapp.com/auth'; // URL HEROKU
   token = ""; //TOKEN DE FIRMA  
 
   constructor(private httpClient: HttpClient, private router: Router) { }
