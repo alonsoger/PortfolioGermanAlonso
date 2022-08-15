@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "portfolio-web-32b2b"
-  }
+    "default": "germanalonso-1aa2c",
+    "germanalonso": "germanalonso-1aa2c"
+  },
+  "targets": {},
+  "etags": {}
 }
