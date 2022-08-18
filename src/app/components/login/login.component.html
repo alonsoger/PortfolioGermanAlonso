@@ -8,30 +8,11 @@
             <input class="form-input" type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
         </div>
 
-<!--      <div class="errores" *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">    
-            <p *ngIf="NombreUsuario?.hasError('required')" class="error">
-            El Usuario es requerido
-            </p>
-            <p *ngIf="NombreUsuario?.errors?.['minlength']" class="error">
-            El usuario debe tener entre 5 y 12 caracteres
-            </p>
-        </div>
--->  
 <!----------------------------------- PASSWORD ------------------------------->
         <div class="form-group">
             <label class="form-label" for="password">Password: </label>
             <input class="form-input" type="password" id="password" name="password" [(ngModel)]="password" required>
-        </div>
-<!--
-        <div class="errores" *ngIf="Password?.errors && Password?.touched">    
-            <p *ngIf="Password?.hasError('required')" class="error">
-            El Password es requerido
-            </p>
-            <p *ngIf="Password?.errors?.['minlength']" class="error">
-            Debe tener 8 caracteres como minimo
-            </p>
-        </div> 
--->      
+        </div>     
 <!----------------------------------- EMAIL ------------------------------->    
 <!--        <div class="form-group">
             <label class="form-label" for="email">Email: </label>
