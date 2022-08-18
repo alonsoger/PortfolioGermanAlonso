@@ -1,8 +1,5 @@
 {
   "projects": {
-    "default": "germanalonso-1aa2c",
-    "germanalonso": "germanalonso-1aa2c"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "frontportfolio-e514e"
+  }
 }
