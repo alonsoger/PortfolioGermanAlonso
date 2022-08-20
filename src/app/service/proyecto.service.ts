@@ -8,8 +8,8 @@ import { Proyecto } from '../modelo/proyecto';
 })
 export class ProyectoService {
 
-  urlProy = 'https://bkendportfolio.herokuapp.com/proyecto/'
-  //urlProy = 'https://localhost:8080/' // URL APIREST
+   //urlProy = 'https://bkendportfolio.herokuapp.com/proyecto/'
+ urlProy = 'https://localhost:8080/' // URL APIREST
 
   constructor(private httpClient: HttpClient) { }
 

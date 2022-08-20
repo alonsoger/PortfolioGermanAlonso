@@ -7,9 +7,9 @@ import { persona } from '../modelo/persona.modelo';
   providedIn: 'root'
 })
 export class PersonaService {
-  //urlPer = 'http://localhost:8080/personas/'; //URL APIREST
+ urlPer = 'http://localhost:8080/personas/'; //URL APIREST
   
-  urlPer = 'https://bkendportfolio.herokuapp.com/personas/';
+   //urlPer = 'https://bkendportfolio.herokuapp.com/personas/';
 
   constructor(private httpClient: HttpClient) { }
 
