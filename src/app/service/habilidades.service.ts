@@ -7,6 +7,7 @@ import { Habilidades } from '../modelo/habilidades';
   providedIn: 'root'
 })
 export class HabilidadesService {
+  // habURL = 'http://localhost:8080/habilidades/' // URL APIREST
 
   habURL = 'https://bkendportfolio.herokuapp.com/habilidades/'
 

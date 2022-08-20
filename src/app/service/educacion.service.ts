@@ -7,7 +7,8 @@ import { Educacion } from '../modelo/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  eduURL = 'https://bkendportfolio.herokuapp.com/educacion/'
+  // eduURL = 'http://localhost:8080/educacion/' // URL APIREST
+  eduURL = 'https://bkendportfolio.herokuapp.com/educacion/' //URL HEROKU
 
   constructor(private httpClient: HttpClient) { }
 
