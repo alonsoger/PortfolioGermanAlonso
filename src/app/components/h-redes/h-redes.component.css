@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 img {
     height: 50px;
     background-color:  rgb(251, 252, 252);

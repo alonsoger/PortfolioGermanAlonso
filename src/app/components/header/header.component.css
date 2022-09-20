@@ -1,17 +1,31 @@
 * {
+    margin: 0px;
+    padding: 0px;
     background-color:  rgb(251, 252, 252);
 }
 
-header {
+.container {
     display: flex;
     justify-content: space-between;
+    align-content: center;
     align-items: center;
-    
+    flex-wrap: wrap;
+
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
     
 }
 
-.Derecha{
+.iconos{
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
 
+@media (max-width: 459px) {
+    .container {
+        flex-direction: column;
+    }
 }
